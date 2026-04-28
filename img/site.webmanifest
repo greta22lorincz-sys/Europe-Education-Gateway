@@ -1,0 +1,20 @@
+{
+  "name": "Europe Education Gateway",
+  "short_name": "EE Gateway",
+  "start_url": "../index.html",
+  "display": "standalone",
+  "theme_color": "#8B4A3A",
+  "background_color": "#E8E3DC",
+  "icons": [
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,971 @@
+/********** Template CSS **********/
+/* Europe Education Gateway palette */
+:root {
+    --primary: #8B4A3A;
+    --primary-dark: #6d3a2e;
+    --accent: #C9A79C;
+    --page-bg: #E8E3DC;
+    --text: #2B2B2B;
+    --white: #FFFFFF;
+    --secondary: #C9A79C;
+    --light: #FFFFFF;
+    --dark: #2B2B2B;
+    --bs-primary: #8B4A3A;
+    --bs-secondary: #C9A79C;
+    --bs-body-bg: #E8E3DC;
+    --bs-body-color: #2B2B2B;
+    --bs-dark: #2B2B2B;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text);
+}
+
+.text-muted {
+    color: #5a5a5a !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+    color: var(--white) !important;
+}
+
+.btn-primary:active {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+.bg-dark {
+    background-color: var(--dark) !important;
+}
+
+.hero-header.bg-primary {
+    background: linear-gradient(rgba(43, 43, 43, 0.58), rgba(139, 74, 58, 0.62)), url(../img/bg-hero.jpg) center center / cover no-repeat !important;
+}
+
+/* Services page hero */
+.hero-header.hero-header--service.bg-primary {
+    background: linear-gradient(rgba(43, 43, 43, 0.58), rgba(139, 74, 58, 0.62)), url(../img/head4.jpg) center center / cover no-repeat !important;
+}
+
+/* Universities page hero */
+.hero-header.hero-header--universities.bg-primary {
+    background: linear-gradient(rgba(43, 43, 43, 0.58), rgba(139, 74, 58, 0.62)), url(../img/head5.jpg) center center / cover no-repeat !important;
+}
+
+/* Contact page hero — darker scrim + readable title / breadcrumb */
+.hero-header.hero-header--contact.bg-primary {
+    background:
+        linear-gradient(165deg, rgba(10, 10, 12, 0.78) 0%, rgba(28, 22, 20, 0.82) 42%, rgba(75, 42, 36, 0.78) 100%),
+        url(../img/head1.jpg) center center / cover no-repeat !important;
+}
+
+.hero-header--contact h1.display-3 {
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.45),
+        0 2px 12px rgba(0, 0, 0, 0.65),
+        0 4px 28px rgba(0, 0, 0, 0.45);
+}
+
+.hero-header--contact .breadcrumb-item a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
+}
+
+.hero-header--contact .breadcrumb-item a:hover {
+    color: #fff8f4;
+}
+
+.hero-header--contact .breadcrumb-item.active,
+.hero-header--contact .breadcrumb-item.text-white.active {
+    color: rgba(255, 255, 255, 0.98) !important;
+    font-weight: 600;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-header--contact .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Home page hero only: campus/header photo (darker scrim = readable titles) */
+.hero-header.hero-header--home.bg-primary {
+    background:
+        linear-gradient(165deg, rgba(10, 10, 12, 0.78) 0%, rgba(28, 22, 20, 0.82) 42%, rgba(75, 42, 36, 0.78) 100%),
+        url(../img/head1.jpg) center 40% / cover no-repeat !important;
+}
+
+@media (max-width: 991.98px) {
+    .hero-header.hero-header--home.bg-primary {
+        background-position: center 38%;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Navbar is position:absolute over the hero — reserve space so slide titles clear the site name row */
+    .hero-header.hero-header--home.bg-primary {
+        padding-top: clamp(2.875rem, 5vw, 3.625rem) !important;
+    }
+
+    .navbar-light .navbar-brand h1 {
+        font-size: clamp(1.05rem, 0.95rem + 0.65vw, 1.4rem);
+        line-height: 1.25;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-header--home-inner {
+        padding-top: 0.75rem !important;
+        margin-top: 0 !important;
+    }
+}
+
+/* Home hero: title contrast (WCAG-friendly on photo + scrim) */
+.hero-header--home .home-hero-title {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 48rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    font-size: clamp(1.3rem, 2.1vw + 0.88rem, 1.95rem);
+    text-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.45),
+        0 2px 12px rgba(0, 0, 0, 0.65),
+        0 4px 28px rgba(0, 0, 0, 0.45);
+}
+
+.hero-header--home .home-hero-title strong {
+    color: #fff8f4;
+    font-weight: 800;
+    text-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.5),
+        0 2px 14px rgba(0, 0, 0, 0.7);
+}
+
+/* Home: main section headings — one step smaller than default h1 (matches BS h2 scale) */
+.home-section-title {
+    font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+    .home-section-title {
+        font-size: 2rem;
+    }
+}
+
+.hero-header--home .carousel-item p.fs-5 {
+    color: rgba(255, 255, 255, 0.97);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55), 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Home hero carousel — comfortable height (single min-height on inner) */
+.home-hero-carousel .carousel-inner {
+    min-height: clamp(16rem, 40vh, 30rem);
+}
+
+.home-hero-carousel .carousel-item {
+    transition: transform 0.55s ease-in-out;
+}
+
+.home-hero-carousel-control {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 2.75rem;
+    max-width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22) !important;
+    opacity: 1;
+    z-index: 6;
+}
+
+.home-hero-carousel-control:hover,
+.home-hero-carousel-control:focus {
+    background: rgba(255, 255, 255, 0.35) !important;
+}
+
+.home-hero-carousel-control .bi {
+    font-size: 1.5rem;
+    color: var(--white);
+    line-height: 1;
+}
+
+.home-hero-carousel-control.carousel-control-prev {
+    left: 0.75rem;
+}
+
+.home-hero-carousel-control.carousel-control-next {
+    right: 0.75rem;
+}
+
+@media (min-width: 992px) {
+    .home-hero-carousel-control.carousel-control-prev {
+        left: 1.25rem;
+    }
+
+    .home-hero-carousel-control.carousel-control-next {
+        right: 1.25rem;
+    }
+}
+
+.home-hero-carousel-indicators {
+    margin-bottom: 0.75rem;
+    z-index: 5;
+}
+
+.home-hero-carousel-indicators [data-bs-target] {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    margin: 0 0.3rem;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.home-hero-carousel-indicators .active {
+    background-color: var(--white);
+    border-color: var(--white);
+}
+
+@media (max-width: 991.98px) {
+    .home-hero-carousel .carousel-inner {
+        min-height: clamp(15rem, 38vh, 28rem);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .home-hero-carousel .carousel-inner {
+        min-height: clamp(14rem, 36vh, 26rem);
+    }
+
+    .hero-header--home .home-hero-title {
+        font-size: clamp(1.15rem, 5vw + 0.55rem, 1.65rem);
+    }
+
+    .home-hero-carousel-control {
+        width: 2.35rem;
+        height: 2.35rem;
+    }
+
+    .home-hero-carousel-control .bi {
+        font-size: 1.25rem;
+    }
+
+    .home-hero-carousel-control.carousel-control-prev {
+        left: 0.35rem;
+    }
+
+    .home-hero-carousel-control.carousel-control-next {
+        right: 0.35rem;
+    }
+}
+
+.hero-header .btn-light {
+    background: var(--white) !important;
+    color: var(--primary) !important;
+    border-color: var(--white) !important;
+}
+
+.hero-header .btn-light:hover {
+    background: var(--page-bg) !important;
+    color: var(--primary) !important;
+    border-color: var(--page-bg) !important;
+}
+
+.section-title.bg-white {
+    background-color: var(--page-bg) !important;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+    background-color: var(--page-bg) !important;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+
+
+/*** Navbar ***/
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 35px 0;
+    color: #FFFFFF !important;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--dark) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-brand img {
+    max-height: 45px;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-light {
+        position: relative;
+        background: #FFFFFF;
+    }
+
+    .navbar-light .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top.navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+        color: var(--dark) !important;
+    }
+
+    .navbar-light .navbar-brand img {
+        max-height: 45px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-light {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        z-index: 999;
+    }
+    
+    .sticky-top.navbar-light {
+        position: fixed;
+        background: #FFFFFF;
+    }
+
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -1px;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::before,
+    .navbar-light .navbar-nav .nav-link.active::before {
+        width: calc(100% - 2px);
+        left: 1px;
+    }
+
+    .navbar-light .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+}
+
+
+/*** Hero Header ***/
+.hero-header {
+    background: linear-gradient(rgba(43, 43, 43, 0.58), rgba(139, 74, 58, 0.62)), url(../img/bg-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, .5);
+}
+
+.hero-header .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-header .breadcrumb-item a:hover {
+    color: var(--white);
+}
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+/*** Home — “Why work with us” image (wide campus photo: fill column, no letterboxing) ***/
+.home-about-eu-photo {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 260px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(43, 43, 43, 0.14);
+    background: var(--dark);
+}
+
+.home-about-eu-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keep roofline, main facade, and top branding in frame; tweak % if you re-export the asset */
+    object-position: 50% 42%;
+}
+
+@media (min-width: 992px) {
+    .home-about-eu-photo {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .home-about-eu-photo {
+        aspect-ratio: 16 / 10;
+        min-height: 0;
+        max-height: 56vh;
+    }
+
+    .home-about-eu-img {
+        object-position: 50% 40%;
+    }
+}
+
+
+/*** Service ***/
+.service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item:hover {
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+
+/* Contract row: keep PDF language links readable (parent hover would force white on white menu) */
+.service-item:hover .contract-pdf-dropdown .dropdown-item {
+    color: var(--text) !important;
+}
+
+.service-item:hover .contract-pdf-dropdown .dropdown-item:hover,
+.service-item:hover .contract-pdf-dropdown .dropdown-item:focus {
+    color: var(--white) !important;
+}
+
+.service-item:hover .contract-pdf-dropdown .dropdown-item:active {
+    color: var(--white) !important;
+}
+
+/* Services page: equal-height package cards (full-width contract row is separate) */
+.service-page-cards > [class*="col-"] {
+    display: flex;
+}
+
+.service-page-cards .service-item.service-item--package {
+    flex: 1 1 auto;
+}
+
+@media (min-width: 768px) {
+    .service-page-cards .service-item.service-item--package {
+        min-height: 26rem;
+    }
+}
+
+
+/*** Destination / Universities gallery ***/
+.uni-city-grid {
+    --uni-card-radius: 14px;
+    --uni-card-shadow: 0 10px 40px rgba(43, 43, 43, 0.12);
+}
+
+.uni-city-card {
+    position: relative;
+    display: block;
+    border-radius: var(--uni-card-radius);
+    overflow: hidden;
+    box-shadow: var(--uni-card-shadow);
+    background-color: var(--dark);
+    aspect-ratio: 4 / 3;
+    text-decoration: none;
+    color: inherit;
+}
+
+.uni-city-card:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.uni-city-card--feature {
+    box-shadow: var(--uni-card-shadow), 0 0 0 3px var(--primary);
+}
+
+.uni-city-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.55s ease;
+}
+
+.uni-city-card:hover img,
+.uni-city-card:focus-visible img {
+    transform: scale(1.06);
+}
+
+.uni-city-badge {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    max-width: calc(100% - 2rem);
+    padding: 0.45rem 0.9rem;
+    background: var(--white);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.25;
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(43, 43, 43, 0.18);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.uni-city-pdf-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 1rem;
+    background: rgba(43, 43, 43, 0.62);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.uni-city-card:hover .uni-city-pdf-overlay,
+.uni-city-card:focus-within .uni-city-pdf-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.uni-city-pdf-label {
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.uni-city-pdf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.uni-city-pdf-link {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    background: var(--white);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.uni-city-pdf-link:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 767.98px) {
+    .uni-city-pdf-overlay {
+        opacity: 1;
+        visibility: visible;
+        justify-content: flex-end;
+        padding: 0.65rem 0.75rem 3.35rem;
+        background: linear-gradient(180deg, transparent 35%, rgba(43, 43, 43, 0.88) 100%);
+    }
+
+    .uni-city-pdf-label {
+        display: none;
+    }
+
+    .uni-city-pdf-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .uni-city-pdf-link {
+        flex: 1 1 auto;
+        min-width: 6.5rem;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.65rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .uni-city-card {
+        aspect-ratio: 16 / 10;
+    }
+
+    .uni-city-badge {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.7rem;
+    }
+}
+
+/* Legacy destination hover (non-card links) */
+.destination img {
+    transition: .5s;
+}
+
+.destination a:not(.uni-city-card):hover img {
+    transform: scale(1.1);
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+/*** Multilingual (EN / AR / UR / TR) ***/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap');
+
+html[lang="ar"] body,
+html[lang="ar"] .navbar-brand h1 {
+    font-family: 'Noto Naskh Arabic', 'Heebo', sans-serif;
+}
+
+html[lang="ur"] body,
+html[lang="ur"] .navbar-brand h1 {
+    font-family: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', 'Heebo', sans-serif;
+}
+
+body.i18n-rtl .navbar-collapse .navbar-nav.ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+body.i18n-rtl .section-title.text-start {
+    text-align: right !important;
+}
+
+body.i18n-rtl .section-title.text-start.pe-3 {
+    padding-right: 0 !important;
+    padding-left: 1rem !important;
+}
+
+body.i18n-rtl .dropdown-menu-end {
+    right: auto;
+    left: 0;
+}
+
+/* Contact page — service agreement downloads (site palette) */
+.contact-contract-pdfs__inner {
+    background: linear-gradient(165deg, var(--white) 0%, rgba(232, 227, 220, 0.45) 100%);
+    border: 1px solid rgba(139, 74, 58, 0.28);
+    border-left: 4px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 1.1rem 1.2rem;
+    box-shadow: 0 6px 28px rgba(43, 43, 43, 0.07);
+}
+
+.contact-contract-pdfs__label {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+}
+
+.contact-contract-pdfs__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 0.45rem;
+    background: rgba(139, 74, 58, 0.12);
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.contact-contract-pdfs__title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.35;
+}
+
+.contact-contract-pdfs__btn {
+    font-weight: 600;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    border-radius: 999px;
+}
+
+body.i18n-rtl .contact-contract-pdfs__label {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+/* Contract PDF dropdown: full width on small screens in contact sidebar */
+/* Contract PDF language menu — matches EEG palette; readable contrast */
+.contract-pdf-dropdown .dropdown-menu {
+    min-width: 12.5rem;
+    padding: 0.4rem 0;
+    background-color: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: 0.5rem;
+    box-shadow:
+        0 0.35rem 0 rgba(109, 58, 46, 0.06),
+        0 0.65rem 1.35rem rgba(43, 43, 43, 0.14);
+    margin-top: 0.4rem;
+}
+
+.contract-pdf-dropdown .dropdown-item {
+    color: var(--text);
+    font-weight: 600;
+    padding: 0.6rem 1.15rem;
+    letter-spacing: 0.01em;
+}
+
+.contract-pdf-dropdown .dropdown-item:hover,
+.contract-pdf-dropdown .dropdown-item:focus {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.contract-pdf-dropdown .dropdown-item:active {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+.contract-pdf-dropdown .dropdown-item:focus-visible {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: -2px;
+}
+
+.contract-pdf-dropdown .dropdown-item + .dropdown-item {
+    border-top: 1px solid rgba(139, 74, 58, 0.18);
+}
+
+body.i18n-rtl .contract-pdf-dropdown .dropdown-menu:not(.dropdown-menu-end) {
+    right: auto;
+    left: 0;
+}
