@@ -650,20 +650,6 @@ body {
     color: var(--light) !important;
 }
 
-/* Contract row: keep PDF language links readable (parent hover would force white on white menu) */
-.service-item:hover .contract-pdf-dropdown .dropdown-item {
-    color: var(--text) !important;
-}
-
-.service-item:hover .contract-pdf-dropdown .dropdown-item:hover,
-.service-item:hover .contract-pdf-dropdown .dropdown-item:focus {
-    color: var(--white) !important;
-}
-
-.service-item:hover .contract-pdf-dropdown .dropdown-item:active {
-    color: var(--white) !important;
-}
-
 /* Services page: equal-height package cards (full-width contract row is separate) */
 .service-page-cards > [class*="col-"] {
     display: flex;
@@ -923,97 +909,12 @@ body.i18n-rtl .dropdown-menu-end {
     left: 0;
 }
 
-/* Contact page — service agreement downloads (site palette) */
-.contact-contract-pdfs__inner {
-    background: linear-gradient(165deg, var(--white) 0%, rgba(232, 227, 220, 0.45) 100%);
-    border: 1px solid rgba(139, 74, 58, 0.28);
-    border-left: 4px solid var(--primary);
-    border-radius: 0.5rem;
-    padding: 1.1rem 1.2rem;
-    box-shadow: 0 6px 28px rgba(43, 43, 43, 0.07);
+/* Contract notice — link readable on service row hover (primary background) */
+.service-item:hover .contract-notice {
+    color: rgba(255, 255, 255, 0.95) !important;
 }
 
-.contact-contract-pdfs__label {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    margin-bottom: 0.85rem;
-}
-
-.contact-contract-pdfs__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    flex-shrink: 0;
-    border-radius: 0.45rem;
-    background: rgba(139, 74, 58, 0.12);
-    color: var(--primary);
-    font-size: 1.1rem;
-}
-
-.contact-contract-pdfs__title {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--text);
-    line-height: 1.35;
-}
-
-.contact-contract-pdfs__btn {
-    font-weight: 600;
-    padding-top: 0.65rem;
-    padding-bottom: 0.65rem;
-    border-radius: 999px;
-}
-
-body.i18n-rtl .contact-contract-pdfs__label {
-    flex-direction: row-reverse;
-    text-align: right;
-}
-
-/* Contract PDF dropdown: full width on small screens in contact sidebar */
-/* Contract PDF language menu — matches EEG palette; readable contrast */
-.contract-pdf-dropdown .dropdown-menu {
-    min-width: 12.5rem;
-    padding: 0.4rem 0;
-    background-color: var(--white);
-    border: 2px solid var(--primary);
-    border-radius: 0.5rem;
-    box-shadow:
-        0 0.35rem 0 rgba(109, 58, 46, 0.06),
-        0 0.65rem 1.35rem rgba(43, 43, 43, 0.14);
-    margin-top: 0.4rem;
-}
-
-.contract-pdf-dropdown .dropdown-item {
-    color: var(--text);
-    font-weight: 600;
-    padding: 0.6rem 1.15rem;
-    letter-spacing: 0.01em;
-}
-
-.contract-pdf-dropdown .dropdown-item:hover,
-.contract-pdf-dropdown .dropdown-item:focus {
-    background-color: var(--primary);
-    color: var(--white);
-}
-
-.contract-pdf-dropdown .dropdown-item:active {
-    background-color: var(--primary-dark);
-    color: var(--white);
-}
-
-.contract-pdf-dropdown .dropdown-item:focus-visible {
-    outline: 2px solid var(--primary-dark);
-    outline-offset: -2px;
-}
-
-.contract-pdf-dropdown .dropdown-item + .dropdown-item {
-    border-top: 1px solid rgba(139, 74, 58, 0.18);
-}
-
-body.i18n-rtl .contract-pdf-dropdown .dropdown-menu:not(.dropdown-menu-end) {
-    right: auto;
-    left: 0;
+.service-item:hover .contract-notice a {
+    color: #fff8f4 !important;
+    text-decoration: underline;
 }
