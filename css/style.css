@@ -909,6 +909,134 @@ body.i18n-rtl .dropdown-menu-end {
     left: 0;
 }
 
+/* Social links — name beside icon (topbar + footer) */
+.topbar-social-named,
+.footer-social-named {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 1.25rem;
+}
+
+.social-link-named {
+    white-space: normal;
+}
+
+.social-link-named.d-inline-flex {
+    gap: 0.4rem;
+}
+
+.topbar-social-named .social-link-named span {
+    font-size: inherit;
+}
+
+.footer-social-named .social-link-named span {
+    line-height: 1.35;
+}
+
+@media (max-width: 991.98px) {
+    .topbar-social-named {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.footer .social-link-named:hover {
+    color: var(--accent) !important;
+}
+
+.topbar-social-named .social-link-named:hover {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-decoration: underline;
+}
+
+
+/* Home invite CTA + contact enquiry form (match service-item card treatment) */
+.home-reach-invite {
+    background: linear-gradient(160deg, rgba(139, 74, 58, 0.08) 0%, var(--page-bg) 42%, rgba(201, 167, 156, 0.18) 100%);
+}
+
+.enquiry-invite-card,
+.enquiry-form-card {
+    background: var(--white);
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: box-shadow .5s ease;
+    border: 1px solid rgba(139, 74, 58, 0.07);
+}
+
+.enquiry-invite-card:hover,
+.enquiry-form-card:hover {
+    box-shadow: 0 0 52px rgba(0, 0, 0, .11);
+}
+
+.enquiry-map-frame {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.enquiry-form-header-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+}
+
+.enquiry-form-input,
+.site-enquiry-form .enquiry-form-input {
+    border: 1px solid rgba(43, 43, 43, 0.12);
+    border-radius: 10px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.enquiry-form-textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.site-enquiry-form .btn-primary {
+    font-family: 'Nunito', sans-serif;
+    border-radius: 10px;
+}
+
+.site-enquiry-form .form-control:focus,
+.site-enquiry-form .form-select:focus,
+.enquiry-form-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(139, 74, 58, 0.12);
+}
+
+body.i18n-rtl .enquiry-form-card .enquiry-form-header {
+    flex-direction: row-reverse;
+}
+
+body.i18n-rtl .enquiry-form-card .enquiry-form-intro {
+    text-align: right !important;
+}
+
+body.i18n-rtl .site-enquiry-form .form-label {
+    text-align: right;
+}
+
+body.i18n-rtl .site-enquiry-form .form-select,
+body.i18n-rtl .site-enquiry-form textarea {
+    text-align: right;
+}
+
+body.i18n-rtl .site-enquiry-form textarea {
+    direction: rtl;
+}
+
+.site-enquiry-form input[type="email"] {
+    direction: ltr;
+    text-align: left;
+}
+
+body.i18n-rtl .site-enquiry-form input[type="email"] {
+    unicode-bidi: embed;
+}
+
+#site-enquiry {
+    scroll-margin-top: 6.5rem;
+}
+
 /* Contract notice — link readable on service row hover (primary background) */
 .service-item:hover .contract-notice {
     color: rgba(255, 255, 255, 0.95) !important;
