@@ -71,6 +71,12 @@
             el.setAttribute(attr, t[key]);
         });
 
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-placeholder');
+            if (!key || t[key] === undefined) return;
+            el.setAttribute('placeholder', t[key]);
+        });
+
         var page = document.body.getAttribute('data-page');
         if (page) {
             var mt = t['meta_title_' + page];
